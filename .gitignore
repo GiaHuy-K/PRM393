@@ -1,0 +1,78 @@
+# -------------------------------------------------------------------------
+# Flutter / Dart
+# -------------------------------------------------------------------------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# Ký hiệu liên kết đến bộ nhớ lưu trữ Flutter (dành cho Web)
+.canvas_icudtl.dat
+.libs
+
+# -------------------------------------------------------------------------
+# Android
+# -------------------------------------------------------------------------
+android/**/.gradle
+android/local.properties
+android/**/GeneratedPluginRegistrant.java
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+.modules.xml
+
+# Tệp tin mã hóa Android (Key và Keystore)
+*.keystore
+*.jks
+*.p12
+*.pem
+*.pk8
+*google-services.json
+
+# -------------------------------------------------------------------------
+# iOS / macOS (Xcode)
+# -------------------------------------------------------------------------
+ios/. xcode.env.local
+ios/**/GeneratedPluginRegistrant.h
+ios/**/GeneratedPluginRegistrant.m
+ios/**/Flutter/Flutter xcconfig
+ios/**/Flutter/ephemeral/
+ios/**/Pods/
+ios/**/.symlinks/
+ios/**/Podfile.lock
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+**/doc_images_and_constants_lb/
+
+# -------------------------------------------------------------------------
+# Web
+# -------------------------------------------------------------------------
+doc/api/
+build/web/
+
+# -------------------------------------------------------------------------
+# Windows / Linux
+# -------------------------------------------------------------------------
+windows/flutter/ephemeral/
+linux/flutter/ephemeral/
+
+# -------------------------------------------------------------------------
+# Environment Variables & Secrets (Bảo mật thông tin cá nhân)
+# -------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# -------------------------------------------------------------------------
+# VS Code
+# -------------------------------------------------------------------------
+.vscode/
