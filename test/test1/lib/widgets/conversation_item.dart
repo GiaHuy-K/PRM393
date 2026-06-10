@@ -11,22 +11,30 @@ class ConversationItem extends StatelessWidget {
     return InkWell(
       onTap: () {},
       child: ListTile(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
         leading: CircleAvatar(
           radius: 28,
           backgroundImage: NetworkImage(user.avatarUrl),
         ),
         title: Text(
           user.name,
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
         ),
-        subtitle: Text(
-          user.lastMessage ?? "",
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-        ),
-        trailing: Text(
-          user.lastMessageTime ?? "",
-          style: const TextStyle(color: Colors.grey, fontSize: 12),
+        subtitle: Row(
+          children: [
+            Expanded(
+              child: Text(
+                user.lastMessage ?? "",
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(color: Colors.grey[600], fontSize: 14),
+              ),
+            ),
+            Text(
+              " • ${user.lastMessageTime}",
+              style: TextStyle(color: Colors.grey[500], fontSize: 13),
+            ),
+          ],
         ),
       ),
     );

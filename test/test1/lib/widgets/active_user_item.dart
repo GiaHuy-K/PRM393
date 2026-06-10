@@ -35,8 +35,8 @@ class ActiveUserItem extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            user.name.split(' ').last, // Chỉ lấy tên gọi cuối cùng
-            style: const TextStyle(fontSize: 13),
+            user.name.split(' ').last, // Chỉ hiển thị tên gọi cuối cho gọn
+            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
           ),
         ],
       ),

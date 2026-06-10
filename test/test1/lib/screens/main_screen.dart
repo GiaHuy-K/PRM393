@@ -12,7 +12,6 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
-  // Danh sách các màn hình ứng với từng Tab
   final List<Widget> _screens = [
     const ChatScreen(),
     const PeopleScreen(),
@@ -24,20 +23,27 @@ class _MainScreenState extends State<MainScreen> {
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
+        backgroundColor: Colors.white,
+        elevation: 8,
+        type: BottomNavigationBarType.fixed,
         onTap: (index) {
           setState(() {
-            _currentIndex = index; // Thay đổi tab khi tap
+            _currentIndex = index;
           });
         },
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w600, fontSize: 12),
+        unselectedLabelStyle: const TextStyle(fontSize: 12),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.chat_bubble),
+            activeIcon: Icon(Icons.chat_bubble, color: Colors.blue),
             label: "Chats",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.people),
+            activeIcon: Icon(Icons.people, color: Colors.blue),
             label: "People",
           ),
         ],
